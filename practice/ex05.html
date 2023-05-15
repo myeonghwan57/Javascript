@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>HTML</h1>
+  <a href="ex05.html">WEB</a>
+  <a href="ex05.html">WEB2</a>
+  <a href="ex05.html">WEB3</a>
+  <a href="ex05.html">WEB4</a>
+  <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      this.value = 'day'
+      target.style.backgroundColor='black'
+      target.style.color='white'
+      var links = document.querySelectorAll('a');
+      var i = 0;
+      while(i<links.length){
+        links[i].style.color='yellow';
+        i=i+1;
+      }
+    }
+    else{
+    this.value = 'night'
+      target.style.backgroundColor='white'
+      target.style.color='black'
+      
+      var links = document.querySelectorAll('a');
+      var i = 0;
+      while(i<links.length){
+        links[i].style.color='blue';
+        i=i+1;
+      }
+    }
+  ">
+  
+  <script></script>
+</body>
+</html>
