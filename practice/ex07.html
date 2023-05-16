@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function nightBtnHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        self.value = 'day'
+        target.style.backgroundColor='black'
+        target.style.color='white'
+        var links = document.querySelectorAll('a');
+        var i = 0;
+        while(i<links.length){
+          links[i].style.color='yellow';
+          i=i+1;
+        }
+      }
+      else{
+        self.value = 'night'
+        target.style.backgroundColor='white'
+        target.style.color='black'
+        
+        var links = document.querySelectorAll('a');
+        var i = 0;
+        while(i<links.length){
+          links[i].style.color='blue';
+          i=i+1;
+        }
+      }
+    }
+    function sum(left, right){
+      document.write(left+right+'<br>')
+    }
+    function sum2(left,right){
+      return left+right;
+    }
+  </script>
+</head>
+<body>
+  <h1>HTML</h1>
+  <a href="">WEB</a>
+  <a href="">WEB2</a>
+  <a href="">WEB3</a>
+  <a href="">WEB4</a>
+  <input type="button" value="night" onclick="
+    nightBtnHandler(self);
+  ">
+  <script>sum(1,2);</script>
+  
+</body>
+</html>
